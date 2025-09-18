@@ -5,20 +5,27 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.3</version>
+        <version>3.5.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>be.ucll.backend2</groupId>
     <artifactId>herhaling</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>01-Herhaling-Demo</name>
-    <description>01-Herhaling-Demo</description>
+    <version>2.0.0-SNAPSHOT</version>
+    <name>Herhaling</name>
+    <description>Herhaling</description>
     <url/>
     <licenses>
         <license/>
     </licenses>
     <developers>
-        <developer/>
+        <developer>
+            <id>RockinRoel</id>
+            <name>Roel Standaert</name>
+            <email>roel.standaert@ucll.be</email>
+            <organization>UC Leuven VZW</organization>
+            <organizationUrl>https://www.ucll.be</organizationUrl>
+            <timezone>Europe/Brussels</timezone>
+        </developer>
     </developers>
     <scm>
         <connection/>
