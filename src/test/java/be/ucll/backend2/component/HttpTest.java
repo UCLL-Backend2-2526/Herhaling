@@ -1,4 +1,4 @@
-package be.ucll.backend2;
+package be.ucll.backend2.component;
 
 import be.ucll.backend2.repository.ActorRepository;
 import be.ucll.backend2.repository.DbInitializer;
