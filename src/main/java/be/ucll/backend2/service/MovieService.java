@@ -1,6 +1,9 @@
 package be.ucll.backend2.service;
 
+import be.ucll.backend2.controller.dto.MovieDto;
+import be.ucll.backend2.model.Actor;
 import be.ucll.backend2.model.Movie;
+import be.ucll.backend2.repository.ActorRepository;
 import be.ucll.backend2.repository.MovieRepository;
 import org.springframework.stereotype.Service;
 
@@ -10,9 +13,11 @@ import java.util.Optional;
 @Service
 public class MovieService {
     private final MovieRepository movieRepository;
+    private final ActorRepository actorRepository;
 
-    public MovieService(MovieRepository movieRepository) {
+    public MovieService(MovieRepository movieRepository, ActorRepository actorRepository) {
         this.movieRepository = movieRepository;
+        this.actorRepository = actorRepository;
     }
 
     public List<Movie> getAllMovies() {
@@ -29,5 +34,11 @@ public class MovieService {
         } else {
             return movieRepository.findAll();
         }
+    }
+
+    public Movie addMovie(MovieDto movieDto) {
+        movieDto.actors().forEach(name -> {
+            var actor = actorRepository.findByName(name).orElse(actorRepository.save(new Actor(name)));
+        });
     }
 }
